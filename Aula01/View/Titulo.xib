@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Titulo" customModule="Aula01" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -23,13 +23,25 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqJ-UN-5Qc">
+                            <rect key="frame" x="50" y="71.666666666666686" width="37" height="30"/>
+                            <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Ação"/>
+                            <connections>
+                                <action selector="btAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="AIK-Hx-LT4"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstItem="kqJ-UN-5Qc" firstAttribute="leading" secondItem="5Rg-fl-S4A" secondAttribute="leading" constant="50" id="883-jK-hUJ"/>
+                        <constraint firstAttribute="trailing" secondItem="kqJ-UN-5Qc" secondAttribute="trailing" constant="49.670000000000002" id="LLE-7A-8Af"/>
                         <constraint firstItem="mK2-KM-Hgy" firstAttribute="top" secondItem="5Rg-fl-S4A" secondAttribute="top" constant="54" id="dAm-a8-TnJ"/>
                         <constraint firstAttribute="bottom" secondItem="mK2-KM-Hgy" secondAttribute="bottom" constant="53" id="kri-HK-jZm"/>
                         <constraint firstAttribute="trailing" secondItem="mK2-KM-Hgy" secondAttribute="trailing" constant="9" id="r9v-AA-U7A"/>
                         <constraint firstItem="mK2-KM-Hgy" firstAttribute="leading" secondItem="5Rg-fl-S4A" secondAttribute="leading" constant="8" id="tf1-ie-mo6"/>
+                        <constraint firstItem="kqJ-UN-5Qc" firstAttribute="firstBaseline" secondItem="mK2-KM-Hgy" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="u1Y-Ve-0Wd"/>
                     </constraints>
                     <connections>
                         <outlet property="labelTitulo" destination="mK2-KM-Hgy" id="RMR-76-I41"/>
@@ -46,6 +58,9 @@
         </view>
     </objects>
     <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

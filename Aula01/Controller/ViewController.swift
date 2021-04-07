@@ -72,3 +72,9 @@ class ViewController: UIViewController {
     }
 
 }
+
+extension ViewController: TituloDelegate {
+    func buttonAction() {
+        print("====================================")
+    }
+}

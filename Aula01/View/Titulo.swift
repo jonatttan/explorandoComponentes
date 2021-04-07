@@ -8,7 +8,13 @@
 import Foundation
 import UIKit
 
+protocol TituloDelegate: class {
+    func buttonAction()
+}
+
 class Titulo: UIView {
+    weak var delegate: TituloDelegate?
+    var buttonAction: (() -> Void)?
     @IBOutlet private var labelTitulo: UILabel?
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,4 +37,13 @@ class Titulo: UIView {
     func setupUI(cor: CollectionColors) {
         self.backgroundColor = cor.colorSelected
     }
+    
+    @IBAction func btAction(_ sender: UIButton) {
+        if let kButonAction = buttonAction {
+            kButonAction()
+        } else {
+            delegate?.buttonAction()
+        }
+    }
+    
 }

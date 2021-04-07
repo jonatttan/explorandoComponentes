@@ -58,10 +58,10 @@ class ViewController: UIViewController {
 //        minha2View.backgroundColor = .gray
 //        stackVw.addArrangedSubview(minha2View)
         // 
-        let meuTitulo = Titulo()
+        let meuTitulo = Titulo(title: "Ops")
         meuTitulo.backgroundColor = CollectionColors.corCeu.colorSelected
         meuTitulo.addTitulo(titulo: "Bem Vindo!", positionY: 200, cor: CollectionColors.corMar.colorSelected)
-        meuTitulo.setupUI(cor: .corAzuLeve)
+//        meuTitulo.setupUI(cor: .corAzuLeve)
         stackVw.addArrangedSubview(meuTitulo)
         //
         testeDosEnun(categoria: .semana, cor: .corTerra)

@@ -12,20 +12,42 @@ protocol TituloDelegate: class {
     func buttonAction()
 }
 
-class Titulo: UIView {
+public class Titulo: UIView {
     weak var delegate: TituloDelegate?
     var buttonAction: (() -> Void)?
+    
+    let nibName = "Vamos mudar."
+    var contentView:UIView?
+    var tituloHere = ""
+
+    struct EnumTitulo {
+        let name: String
+        let background: UIColor
+    }
+    
     @IBOutlet private var labelTitulo: UILabel?
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setupInit()
     }
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    
+    init(title: String) {
+        super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        self.tituloHere = "CoisaQualquer"
+        layoutIfNeeded()
     }
-    override class func awakeFromNib() {
+    
+    override public func awakeFromNib() {
         super.awakeFromNib()
     }
-    func addTitulo(titulo: String, positionY: Int, cor: UIColor) {
+    
+    override public func layoutSubviews() {
+        super.layoutSubviews()
+        setupUIView()
+    }
+    
+    public func addTitulo(titulo: String, positionY: Int, cor: UIColor) {
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 20))
         titleLabel.text = titulo
         titleLabel.textAlignment = .center
@@ -34,8 +56,26 @@ class Titulo: UIView {
         self.addSubview(titleLabel)
         self.translatesAutoresizingMaskIntoConstraints = false
     }
-    func setupUI(cor: CollectionColors) {
-        self.backgroundColor = cor.colorSelected
+    
+    private func setupInit() {
+        if self.tituloHere.isEmpty {
+            self.tituloHere = "1o Preenchimento"
+        }
+    }
+    
+    func setupUI(title: String) {
+        DispatchQueue.main.async {
+            self.tituloHere = title
+            self.labelTitulo?.text = title
+        }
+    }
+    
+    private func setupUICell() {
+        self.labelTitulo?.text = tituloHere
+    }
+    
+    private func setupUIView() {
+        self.labelTitulo?.text = tituloHere
     }
     
     @IBAction func btAction(_ sender: UIButton) {

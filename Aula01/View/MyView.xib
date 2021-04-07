@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiG-LV-tYh" customClass="MyView" customModule="Aula01">
+                    <rect key="frame" x="51.666666666666657" y="378" width="311" height="140"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Megastore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-ut-mJB">
+                            <rect key="frame" x="108.66666666666669" y="54" width="93.666666666666686" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-L6-nAY">
+                            <rect key="frame" x="38" y="113" width="235" height="4"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="235" id="3a2-kw-poC"/>
+                            </constraints>
+                        </progressView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    <constraints>
+                        <constraint firstItem="f5m-L6-nAY" firstAttribute="centerX" secondItem="dg5-ut-mJB" secondAttribute="centerX" id="gDk-ox-W2q"/>
+                        <constraint firstAttribute="bottom" secondItem="f5m-L6-nAY" secondAttribute="bottom" constant="23" id="hSN-6a-IY5"/>
+                        <constraint firstItem="f5m-L6-nAY" firstAttribute="leading" secondItem="fiG-LV-tYh" secondAttribute="leading" constant="38" id="jFi-6D-jIs"/>
+                        <constraint firstItem="f5m-L6-nAY" firstAttribute="centerX" secondItem="fiG-LV-tYh" secondAttribute="centerX" id="pyB-G7-WIG"/>
+                        <constraint firstItem="f5m-L6-nAY" firstAttribute="top" secondItem="dg5-ut-mJB" secondAttribute="bottom" constant="35" id="rPJ-8a-CFf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fiG-LV-tYh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="334" id="VkT-Sz-mIV"/>
+                <constraint firstItem="fiG-LV-tYh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n7f-bh-e5U"/>
+                <constraint firstItem="fiG-LV-tYh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wew-Lh-MaT"/>
+            </constraints>
+            <point key="canvasLocation" x="-231.19999999999999" y="97.601199400299862"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

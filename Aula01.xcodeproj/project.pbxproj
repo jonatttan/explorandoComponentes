@@ -185,10 +185,7 @@
 		89AE5C77261CCB5700D7B6E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				89AE5C7B261CCC1C00D7B6E8 /* MyView.xib */,
-				89AE5C80261CCC6000D7B6E8 /* MyView.swift */,
-				891C2995261D10B3002D8010 /* Titulo.xib */,
-				891C299A261D10CB002D8010 /* Titulo.swift */,
+				89F1E874261F7231000C2A42 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +210,17 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		89F1E874261F7231000C2A42 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				89AE5C7B261CCC1C00D7B6E8 /* MyView.xib */,
+				89AE5C80261CCC6000D7B6E8 /* MyView.swift */,
+				891C2995261D10B3002D8010 /* Titulo.xib */,
+				891C299A261D10CB002D8010 /* Titulo.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -52,7 +52,7 @@ class ViewController: UIViewController {
         // Adicionando componente preparado na MyView.swift
         let minhaView = MyView().loadNib()
         minhaView.backgroundColor = CollectionColors.corMar.colorSelected
-        stackVw.addArrangedSubview(minhaView)
+//        stackVw.addArrangedSubview(minhaView)
         // O bloco abaixo não surtiu efeito juntamente com o bloco a cima
 //        let minha2View = MyView().loadNib()
 //        minha2View.backgroundColor = .gray
@@ -62,8 +62,13 @@ class ViewController: UIViewController {
         meuTitulo.backgroundColor = CollectionColors.corCeu.colorSelected
         meuTitulo.addTitulo(titulo: "Bem Vindo!", positionY: 200, cor: CollectionColors.corMar.colorSelected)
 //        meuTitulo.setupUI(cor: .corAzuLeve)
-        stackVw.addArrangedSubview(meuTitulo)
+//        stackVw.addArrangedSubview(meuTitulo)
         //
+        let meuForm = Formulario.fromNib()
+        meuForm.setupUI(titleForm: "New Register")
+        
+        
+        
         testeDosEnun(categoria: .semana, cor: .corTerra)
     }
     func testeDosEnun(categoria: Categoria, cor: CollectionColors) {

@@ -66,6 +66,7 @@ class ViewController: UIViewController {
         //
         let meuForm = Formulario.fromNib()
         meuForm.setupUI(titleForm: "New Register")
+        stackVw.addArrangedSubview(meuForm)
         
         
         

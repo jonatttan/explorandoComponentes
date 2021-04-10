@@ -65,7 +65,9 @@ class ViewController: UIViewController {
 //        stackVw.addArrangedSubview(meuTitulo)
         //
         let meuForm = Formulario.fromNib()
-        meuForm.setupUI(titleForm: "New Register")
+//        meuForm.setupUI(titleForm: "New Register", nome: "Name")
+//        meuForm.setupUI(titleForm: "Example", botao: "Manda")
+        meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone", campo3: "City", campo4: "State", botao: "Submit")
         stackVw.addArrangedSubview(meuForm)
         
         

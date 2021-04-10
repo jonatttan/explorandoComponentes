@@ -14,8 +14,9 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="55g-bU-6Hd">
-                    <rect key="frame" x="20" y="391" width="374" height="301"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="55g-bU-6Hd">
+                    <rect key="frame" x="20" y="44" width="374" height="301"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titulo Formulário" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-0O-WDr">
                             <rect key="frame" x="64" y="8" width="247" height="23"/>
@@ -91,12 +92,6 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="55g-bU-6Hd" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="347" id="Mil-xT-l6r"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="55g-bU-6Hd" secondAttribute="trailing" constant="20" id="NDG-UA-hL0"/>
-                <constraint firstItem="55g-bU-6Hd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="eSq-aV-UCb"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="55g-bU-6Hd" secondAttribute="bottom" constant="170" id="nfV-6M-oQ1"/>
-            </constraints>
             <connections>
                 <outlet property="buttonSubmit" destination="Bkm-v9-Oji" id="KWo-k0-eF5"/>
                 <outlet property="labelFour" destination="5h6-gV-ZFR" id="37u-d0-v2a"/>

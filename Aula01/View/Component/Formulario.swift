@@ -36,7 +36,7 @@ public class Formulario: UIView {
         super.init(frame: CGRect(x: 0, y: 0, width: 200, height: 40))
         layoutIfNeeded()
     }
-    override public func awakeFromNib() { //Esse cara permite a instancia com Formulario.fromNib() na ViewController
+    override public func awakeFromNib() { // Esse cara permite a instancia com Formulario.fromNib() na ViewController
         super.awakeFromNib()
         setupUICell()
     }
@@ -70,7 +70,6 @@ public class Formulario: UIView {
     private func setupUICell() {
 //        buttonSubmit.backgroundColor = #colorLiteral(red: 0.7363891602, green: 1, blue: 0.8901621501, alpha: 1)
     }
-    
     private func setupUIView() {
         self.labelTitulo.text = camposFormulario.initialTitle
         self.labelOne.text = "\(camposFormulario.initialLabel1): "

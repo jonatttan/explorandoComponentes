@@ -56,15 +56,15 @@ class ViewController: UIViewController {
         // Adicionando novamente a mesma view
         let minha2View = MyView().loadNib()
         minha2View.backgroundColor = .gray
-        stackVw.addArrangedSubview(minha2View)
+//        stackVw.addArrangedSubview(minha2View)
         // Adicionando novamente a mesma view
         let minha3View = MyView().loadNib()
         minha3View.backgroundColor = .systemPink
-        stackVw.addArrangedSubview(minha3View)
+//        stackVw.addArrangedSubview(minha3View)
         // Adicionando novamente a mesma view
         let minha4View = MyView().loadNib()
         minha4View.backgroundColor = .blue
-        stackVw.addArrangedSubview(minha4View)
+//        stackVw.addArrangedSubview(minha4View)
         // 
         let meuTitulo = Titulo(title: "Ops")
         meuTitulo.backgroundColor = CollectionColors.corCeu.colorSelected
@@ -76,7 +76,12 @@ class ViewController: UIViewController {
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
         meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
                         campo3: "City", campo4: "State", botao: "Submit")
-//        stackVw.addArrangedSubview(meuForm)
+        stackVw.addArrangedSubview(meuForm)
+        let meuForm2 = Formulario.fromNib()
+//        meuForm.setupUI(titleForm: "Example", botao: "Manda")
+        meuForm2.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
+                        campo3: "City", campo4: "State", botao: "Submit")
+//        stackVw.addArrangedSubview(meuForm2)
         //
         testeDosEnun(categoria: .semana, cor: .corTerra)
     }

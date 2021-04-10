@@ -157,11 +157,7 @@
 				89AE5C78261CCB6100D7B6E8 /* Model */,
 				89AE5C77261CCB5700D7B6E8 /* View */,
 				89AE5C79261CCB6800D7B6E8 /* Controller */,
-				89AE5C37261CCA0800D7B6E8 /* AppDelegate.swift */,
-				89AE5C39261CCA0800D7B6E8 /* SceneDelegate.swift */,
-				89AE5C3D261CCA0800D7B6E8 /* Main.storyboard */,
 				89AE5C43261CCA0900D7B6E8 /* Assets.xcassets */,
-				89AE5C45261CCA0900D7B6E8 /* LaunchScreen.storyboard */,
 				89AE5C48261CCA0900D7B6E8 /* Info.plist */,
 				89AE5C40261CCA0800D7B6E8 /* Aula01.xcdatamodeld */,
 			);
@@ -189,6 +185,8 @@
 		89AE5C77261CCB5700D7B6E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				89AE5C3D261CCA0800D7B6E8 /* Main.storyboard */,
+				89AE5C45261CCA0900D7B6E8 /* LaunchScreen.storyboard */,
 				89F1E874261F7231000C2A42 /* Component */,
 			);
 			path = View;
@@ -197,6 +195,8 @@
 		89AE5C78261CCB6100D7B6E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				89AE5C39261CCA0800D7B6E8 /* SceneDelegate.swift */,
+				89AE5C37261CCA0800D7B6E8 /* AppDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

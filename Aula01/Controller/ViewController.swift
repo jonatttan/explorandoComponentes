@@ -52,26 +52,28 @@ class ViewController: UIViewController {
         // Adicionando componente preparado na MyView.swift
         let minhaView = MyView().loadNib()
         minhaView.backgroundColor = CollectionColors.corMar.colorSelected
-//        stackVw.addArrangedSubview(minhaView)
-        // O bloco abaixo não surtiu efeito juntamente com o bloco a cima
-//        let minha2View = MyView().loadNib()
-//        minha2View.backgroundColor = .gray
+        stackVw.addArrangedSubview(minhaView)
+        // Adicionando novamente a mesma view
+        let minha2View = MyView().loadNib()
+        minha2View.backgroundColor = .gray
 //        stackVw.addArrangedSubview(minha2View)
+        // Adicionando novamente a mesma view
+        let minha3View = MyView().loadNib()
+        minha3View.backgroundColor = .gray
+//        stackVw.addArrangedSubview(minha3View)
         // 
         let meuTitulo = Titulo(title: "Ops")
         meuTitulo.backgroundColor = CollectionColors.corCeu.colorSelected
         meuTitulo.addTitulo(titulo: "Bem Vindo!", positionY: 200, cor: CollectionColors.corMar.colorSelected)
 //        meuTitulo.setupUI(cor: .corAzuLeve)
 //        stackVw.addArrangedSubview(meuTitulo)
-        //
+        // ADICIONANDO FORMULARIO
         let meuForm = Formulario.fromNib()
-//        meuForm.setupUI(titleForm: "New Register", nome: "Name")
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
-        meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone", campo3: "City", campo4: "State", botao: "Submit")
-        stackVw.addArrangedSubview(meuForm)
-        
-        
-        
+        meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
+                        campo3: "City", campo4: "State", botao: "Submit")
+//        stackVw.addArrangedSubview(meuForm)
+        //
         testeDosEnun(categoria: .semana, cor: .corTerra)
     }
     func testeDosEnun(categoria: Categoria, cor: CollectionColors) {

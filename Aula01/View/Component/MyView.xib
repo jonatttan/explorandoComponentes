@@ -14,39 +14,27 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiG-LV-tYh" customClass="MyView" customModule="Aula01">
-                    <rect key="frame" x="51.666666666666657" y="378" width="311" height="140"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiG-LV-tYh" customClass="MyView" customModule="Aula01">
+                    <rect key="frame" x="52" y="44" width="311.33333333333331" height="129"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Megastore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-ut-mJB">
-                            <rect key="frame" x="108.66666666666669" y="54" width="93.666666666666686" height="24"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Megastore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dg5-ut-mJB">
+                            <rect key="frame" x="109" y="54" width="93.666666666666686" height="24"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-L6-nAY">
-                            <rect key="frame" x="38" y="113" width="235" height="4"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="235" id="3a2-kw-poC"/>
-                            </constraints>
+                        <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f5m-L6-nAY">
+                            <rect key="frame" x="38" y="103" width="235" height="4"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </progressView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemPurpleColor"/>
-                    <constraints>
-                        <constraint firstItem="f5m-L6-nAY" firstAttribute="centerX" secondItem="dg5-ut-mJB" secondAttribute="centerX" id="gDk-ox-W2q"/>
-                        <constraint firstAttribute="bottom" secondItem="f5m-L6-nAY" secondAttribute="bottom" constant="23" id="hSN-6a-IY5"/>
-                        <constraint firstItem="f5m-L6-nAY" firstAttribute="leading" secondItem="fiG-LV-tYh" secondAttribute="leading" constant="38" id="jFi-6D-jIs"/>
-                        <constraint firstItem="f5m-L6-nAY" firstAttribute="centerX" secondItem="fiG-LV-tYh" secondAttribute="centerX" id="pyB-G7-WIG"/>
-                        <constraint firstItem="f5m-L6-nAY" firstAttribute="top" secondItem="dg5-ut-mJB" secondAttribute="bottom" constant="35" id="rPJ-8a-CFf"/>
-                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <constraints>
-                <constraint firstItem="fiG-LV-tYh" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="334" id="VkT-Sz-mIV"/>
-                <constraint firstItem="fiG-LV-tYh" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="n7f-bh-e5U"/>
-                <constraint firstItem="fiG-LV-tYh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wew-Lh-MaT"/>
-            </constraints>
             <point key="canvasLocation" x="-231.19999999999999" y="97.601199400299862"/>
         </view>
     </objects>

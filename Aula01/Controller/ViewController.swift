@@ -56,11 +56,15 @@ class ViewController: UIViewController {
         // Adicionando novamente a mesma view
         let minha2View = MyView().loadNib()
         minha2View.backgroundColor = .gray
-//        stackVw.addArrangedSubview(minha2View)
+        stackVw.addArrangedSubview(minha2View)
         // Adicionando novamente a mesma view
         let minha3View = MyView().loadNib()
-        minha3View.backgroundColor = .gray
-//        stackVw.addArrangedSubview(minha3View)
+        minha3View.backgroundColor = .systemPink
+        stackVw.addArrangedSubview(minha3View)
+        // Adicionando novamente a mesma view
+        let minha4View = MyView().loadNib()
+        minha4View.backgroundColor = .blue
+        stackVw.addArrangedSubview(minha4View)
         // 
         let meuTitulo = Titulo(title: "Ops")
         meuTitulo.backgroundColor = CollectionColors.corCeu.colorSelected

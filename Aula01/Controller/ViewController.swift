@@ -75,12 +75,14 @@ class ViewController: UIViewController {
         let meuForm = Formulario.fromNib()
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
         meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
-                        campo3: "City", campo4: "State", botao: "Submit")
+                        campo3: "City", campo4: "State", botao: "Submit", delegate: self)
+//        meuForm.setupUI(titleForm: "Cadastro Magalu", botao: "Vem!", delegate: self)
+//        meuForm.setupUI(delegate: self)
         stackVw.addArrangedSubview(meuForm)
         let meuForm2 = Formulario.fromNib()
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
         meuForm2.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
-                        campo3: "City", campo4: "State", botao: "Submit")
+                         campo3: "City", campo4: "State", botao: "Submit", delegate: self)
 //        stackVw.addArrangedSubview(meuForm2)
         //
         testeDosEnun(categoria: .semana, cor: .corTerra)
@@ -95,5 +97,11 @@ class ViewController: UIViewController {
 extension ViewController: TituloDelegate {
     func buttonAction() {
         print("====================================")
+    }
+}
+
+extension UIViewController: SubmitDataFormDelegate {
+    public func actionSubmit() {
+        print("=======Todos a boooooordo!======")
     }
 }

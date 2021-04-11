@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+public protocol SubmitDataFormDelegate: class { // Delegate
+    func actionSubmit()
+}
+
 public class Formulario: UIView {
     // MARK: - Variaveis
     struct DadosFormulario {
@@ -20,6 +24,8 @@ public class Formulario: UIView {
     }
     public var view: UIView!
     private var camposFormulario = DadosFormulario()
+    var delegateSubmit: SubmitDataFormDelegate? // Delegate
+    var actionSubmit: (() -> Void)? // Delegate
     // MARK: - IBOutlets
     @IBOutlet weak var labelTitulo: UILabel!
     @IBOutlet weak var labelOne: UILabel!
@@ -78,17 +84,30 @@ public class Formulario: UIView {
         self.labelFour.text = "\(camposFormulario.initialLabel4): "
         self.buttonSubmit.setTitle(camposFormulario.initialSubmit, for: .normal)
     }
-    public func setupUI(titleForm: String, botao: String) {
+    public func setupUI(delegate: SubmitDataFormDelegate) {
+        self.delegateSubmit = delegate
+        setupUIView()
+    }
+    public func setupUI(titleForm: String, botao: String, delegate: SubmitDataFormDelegate) {
         camposFormulario.initialTitle = titleForm
         camposFormulario.initialSubmit = botao
+        self.delegateSubmit = delegate
     }
-    public func setupUI(titulo: String, campo1: String, campo2: String, campo3: String, campo4: String, botao: String) {
+    public func setupUI(titulo: String, campo1: String, campo2: String, campo3: String, campo4: String, botao: String, delegate: SubmitDataFormDelegate) { // Delegate
         camposFormulario.initialTitle = titulo
         camposFormulario.initialLabel1 = campo1
         camposFormulario.initialLabel2 = campo2
         camposFormulario.initialLabel3 = campo3
         camposFormulario.initialLabel4 = campo4
         camposFormulario.initialSubmit = botao
-        
+        self.delegateSubmit = delegate
+    }
+    // MARK: - Button Action
+    @IBAction func btSubmitDataForm(_ sender: UIButton) { // Delegate
+        if let actionButton = actionSubmit {
+            actionButton()
+        } else {
+            delegateSubmit?.actionSubmit()
+        }
     }
 }

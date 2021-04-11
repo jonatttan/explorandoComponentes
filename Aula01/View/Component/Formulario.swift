@@ -9,12 +9,12 @@ import Foundation
 import UIKit
 
 public protocol SubmitDataFormDelegate: class { // Delegate
-    func actionSubmit()
+    func actionSubmit(title: String?)
 }
 
 public class Formulario: UIView {
     // MARK: - Variaveis
-    struct DadosFormulario {
+    public struct DadosFormulario {
         var initialTitle = ""
         var initialLabel1 = ""
         var initialLabel2 = ""
@@ -93,13 +93,20 @@ public class Formulario: UIView {
         camposFormulario.initialSubmit = botao
         self.delegateSubmit = delegate
     }
-    public func setupUI(titulo: String, campo1: String, campo2: String, campo3: String, campo4: String, botao: String, delegate: SubmitDataFormDelegate) { // Delegate
-        camposFormulario.initialTitle = titulo
-        camposFormulario.initialLabel1 = campo1
-        camposFormulario.initialLabel2 = campo2
-        camposFormulario.initialLabel3 = campo3
-        camposFormulario.initialLabel4 = campo4
-        camposFormulario.initialSubmit = botao
+    // titulo: String, campo1: String, campo2: String, campo3: String, campo4: String, botao: String
+    public func setupUI(dados: DadosFormulario, delegate: SubmitDataFormDelegate) { // Delegate
+//        camposFormulario.initialTitle = titulo
+//        camposFormulario.initialLabel1 = campo1
+//        camposFormulario.initialLabel2 = campo2
+//        camposFormulario.initialLabel3 = campo3
+//        camposFormulario.initialLabel4 = campo4
+//        camposFormulario.initialSubmit = botao
+        camposFormulario.initialTitle = dados.initialTitle
+        camposFormulario.initialLabel1 = dados.initialLabel1
+        camposFormulario.initialLabel2 = dados.initialLabel2
+        camposFormulario.initialLabel3 = dados.initialLabel3
+        camposFormulario.initialLabel4 = dados.initialLabel4
+        camposFormulario.initialSubmit = dados.initialSubmit
         self.delegateSubmit = delegate
     }
     // MARK: - Button Action
@@ -107,7 +114,7 @@ public class Formulario: UIView {
         if let actionButton = actionSubmit {
             actionButton()
         } else {
-            delegateSubmit?.actionSubmit()
+            delegateSubmit?.actionSubmit(title: camposFormulario.initialTitle)
         }
     }
 }

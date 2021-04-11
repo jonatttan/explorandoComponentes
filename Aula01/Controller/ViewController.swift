@@ -48,6 +48,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
     }
+    var ola = "kkk"
     func setupUI() {
         // Adicionando componente preparado na MyView.swift
         let minhaView = MyView().loadNib()
@@ -74,15 +75,18 @@ class ViewController: UIViewController {
         // ADICIONANDO FORMULARIO
         let meuForm = Formulario.fromNib()
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
-        meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
-                        campo3: "City", campo4: "State", botao: "Submit", delegate: self)
+        //meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
+          //              campo3: "City", campo4: "State", botao: "Submit", delegate: self)
+        let dadosForm = Formulario.DadosFormulario(initialTitle: "Cadastro Life", initialLabel1: "Namezin",
+                                                   initialLabel2: "Fonezin", initialLabel3: "City", initialLabel4: "Region", initialSubmit: "MandaBala!")
+        meuForm.setupUI(dados: dadosForm, delegate: self)
 //        meuForm.setupUI(titleForm: "Cadastro Magalu", botao: "Vem!", delegate: self)
 //        meuForm.setupUI(delegate: self)
         stackVw.addArrangedSubview(meuForm)
         let meuForm2 = Formulario.fromNib()
 //        meuForm.setupUI(titleForm: "Example", botao: "Manda")
-        meuForm2.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
-                         campo3: "City", campo4: "State", botao: "Submit", delegate: self)
+//        meuForm2.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
+//                         campo3: "City", campo4: "State", botao: "Submit", delegate: self)
 //        stackVw.addArrangedSubview(meuForm2)
         //
         testeDosEnun(categoria: .semana, cor: .corTerra)
@@ -101,7 +105,11 @@ extension ViewController: TituloDelegate {
 }
 
 extension UIViewController: SubmitDataFormDelegate {
-    public func actionSubmit() {
-        print("=======Todos a boooooordo!======")
+    public func actionSubmit(title: String?) {
+        if let exibe = title {
+            print(exibe)
+        }
     }
+    
+
 }

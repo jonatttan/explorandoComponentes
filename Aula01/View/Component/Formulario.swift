@@ -8,20 +8,8 @@
 import Foundation
 import UIKit
 
-public protocol SubmitDataFormDelegate: class { // Delegate
-    func actionSubmit()
-}
-
 public class Formulario: UIView {
     // MARK: - Variaveis
-    private struct DadosFormulario {
-        var initialTitle = ""
-        var initialLabel1 = ""
-        var initialLabel2 = ""
-        var initialLabel3 = ""
-        var initialLabel4 = ""
-        var initialSubmit = ""
-    }
     public var view: UIView!
     private var camposFormulario = DadosFormulario()
     var delegateSubmit: SubmitDataFormDelegate? // Delegate
@@ -93,15 +81,14 @@ public class Formulario: UIView {
         camposFormulario.initialSubmit = botao
         self.delegateSubmit = delegate
     }
-    public func setupUI(titulo: String, campo1: String, campo2: String, campo3: String,
-                        campo4: String, botao: String, delegate: SubmitDataFormDelegate) { // Delegate
-        camposFormulario.initialTitle = titulo
-        camposFormulario.initialLabel1 = campo1
-        camposFormulario.initialLabel2 = campo2
-        camposFormulario.initialLabel3 = campo3
-        camposFormulario.initialLabel4 = campo4
-        camposFormulario.initialSubmit = botao
-        self.delegateSubmit = delegate
+    public func setupUI(dados: DadosFormulario) { // Delegate
+        camposFormulario.initialTitle = dados.initialTitle
+        camposFormulario.initialLabel1 = dados.initialLabel1
+        camposFormulario.initialLabel2 = dados.initialLabel2
+        camposFormulario.initialLabel3 = dados.initialLabel3
+        camposFormulario.initialLabel4 = dados.initialLabel4
+        camposFormulario.initialSubmit = dados.initialSubmit
+        self.delegateSubmit = dados.delegate
     }
     // MARK: - Button Action
     @IBAction func btSubmitDataForm(_ sender: UIButton) { // Delegate

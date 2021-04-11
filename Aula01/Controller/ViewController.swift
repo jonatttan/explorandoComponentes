@@ -27,6 +27,8 @@ enum CollectionColors {
     }
 }
 
+
+
 extension UIColor {
     static let newColorByExtension = #colorLiteral(red: 0.5866405964, green: 0.6862757802, blue: 0.4406885803, alpha: 1)
 }
@@ -48,21 +50,24 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
     }
-    var ola = "kkk"
     func setupUI() {
         // Adicionando componente preparado na MyView.swift
         let minhaView = MyView().loadNib()
         minhaView.backgroundColor = CollectionColors.corMar.colorSelected
         stackVw.addArrangedSubview(minhaView)
-        // Adicionando novamente a mesma view
-        let minha2View = MyView().loadNib()
-        minha2View.backgroundColor = .gray
-//        stackVw.addArrangedSubview(minha2View)
         //
+//        let tituloS = Titulo.init() // Colocou apenas o elemento Label, não aparenta trazer a View.
+//        tituloS.addTitulo(titulo: "dads", positionY: 3, cor: .lightText)
+//        stackVw.addArrangedSubview(tituloS)
+        //
+        let myTitle = Titulo.fromNib()
+        myTitle.setupUI(dados: DataTitle(titulo: "Côza Linda", delegate: self))
+//        stackVw.addArrangedSubview(myTitle)
         // ADICIONANDO FORMULARIO
         let meuForm = Formulario.fromNib()
-        meuForm.setupUI(titulo: "Update Register", campo1: "Your Name", campo2: "Phone",
-                        campo3: "City", campo4: "State", botao: "Submit", delegate: self)
+        meuForm.setupUI(dados: DadosFormulario(initialTitle: "Update Register", initialLabel1: "Your Name",
+                                               initialLabel2: "Phone", initialLabel3: "City", initialLabel4: "State",
+                                               initialSubmit: "Submit", delegate: self))
         stackVw.addArrangedSubview(meuForm)
         //
         testeDosEnun(categoria: .semana, cor: .corTerra)

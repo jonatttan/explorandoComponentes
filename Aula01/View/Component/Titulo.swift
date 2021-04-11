@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-protocol TituloDelegate: class {
-    func buttonAction()
-}
-
 public class Titulo: UIView {
     weak var delegate: TituloDelegate?
     var buttonAction: (() -> Void)?
@@ -19,14 +15,18 @@ public class Titulo: UIView {
     // var contentView:UIView?
     var tituloHere = ""
 
-    struct EnumTitulo {
-        let name: String
-        let background: UIColor
-    }
+//    struct EnumTitulo {
+//        let name: String
+//        let background: UIColor
+//    }
     @IBOutlet private var labelTitulo: UILabel?
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupInit()
+    }
+    init() {
+        super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+        layoutIfNeeded()
     }
     init(title: String) {
         super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
@@ -59,6 +59,15 @@ public class Titulo: UIView {
         DispatchQueue.main.async {
             self.tituloHere = title
             self.labelTitulo?.text = title
+        }
+    }
+    public func setupUI(dados: DataTitle) {
+        DispatchQueue.main.async {
+            if let titulo = dados.titulo {
+                self.tituloHere = titulo
+            }
+            self.labelTitulo?.text = dados.titulo
+            self.delegate = dados.delegate
         }
     }
     private func setupUICell() {

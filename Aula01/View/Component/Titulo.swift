@@ -14,20 +14,16 @@ public class Titulo: UIView {
     let nibName = "Vamos mudar."
     // var contentView:UIView?
     var tituloHere = ""
-
-//    struct EnumTitulo {
-//        let name: String
-//        let background: UIColor
-//    }
+    
     @IBOutlet private var labelTitulo: UILabel?
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupInit()
     }
-    init() {
-        super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
-        layoutIfNeeded()
-    }
+//    init() {
+//        super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
+//        layoutIfNeeded()
+//    }
     init(title: String) {
         super.init(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
         self.tituloHere = "CoisaQualquer"

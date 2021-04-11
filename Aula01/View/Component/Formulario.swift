@@ -10,7 +10,7 @@ import UIKit
 
 public class Formulario: UIView {
     // MARK: - Variaveis
-    public var view: UIView!
+//    public var view: UIView! // Aparentemente, sem uso
     private var camposFormulario = DadosFormulario()
     var delegateSubmit: SubmitDataFormDelegate? // Delegate
     var actionSubmit: (() -> Void)? // Delegate
@@ -92,10 +92,10 @@ public class Formulario: UIView {
     }
     // MARK: - Button Action
     @IBAction func btSubmitDataForm(_ sender: UIButton) { // Delegate
-        if let actionButton = actionSubmit {
+        if let actionButton = self.actionSubmit {
             actionButton()
         } else {
-            delegateSubmit?.actionSubmit()
+            self.delegateSubmit?.actionSubmit()
         }
     }
 }
